@@ -15,13 +15,13 @@ public class Deadlock {
         @Override
         public void run() {
             synchronized(resource1){
-                System.out.println("Thread 1 has " + resource1);
+                System.out.println("Thread " + Thread.currentThread().getName() + " has " + resource1);
                 try {
                     Thread.sleep(20);
                 } catch (InterruptedException e) {}
 
                 synchronized(resource2){
-                    System.out.println("Thread 1 has " + resource2);
+                    System.out.println("Thread " + Thread.currentThread().getName() + " has " + resource2);
                 }
             }
         }
