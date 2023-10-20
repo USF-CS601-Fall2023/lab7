@@ -14,7 +14,7 @@ public class GameClient implements Runnable {
             // FILL IN CODE to play the number guessing name with the server
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            System.out.println(ex);
         }
     }
 
